@@ -6,7 +6,7 @@ public record Book(
     Integer id,
     String title,
     String author,
-    Integer ISBN,
+    Integer isbn,
     Genre genre,
     LocalDateTime dateCreated,
     LocalDateTime dateUpdated
