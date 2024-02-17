@@ -8,9 +8,11 @@ public record Book(
     String author,
     Integer isbn,
     Genre genre,
-    LocalDateTime yearOfPublication,
+    Integer yearOfPublication,
     LocalDateTime dateCreated,
     LocalDateTime dateUpdated
 ) {
+
+    
     
 }
