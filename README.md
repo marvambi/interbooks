@@ -26,23 +26,6 @@ Note: A bidirectional relationship is accomplished by adding a `mappedBy` attrib
 You can add these types of methods in your repository interface to query the model objects:
 ```
 findBy<Your property>
-findBy<Your property>Containing
-findBy<Your property>StartingWith
-findBy<Your property>EndingWith
-findBy<Your property>Like
-findBy<Your property>LessThan
-findBy<Your property>LessThanEqual
-findBy<Your property>In
-findBy<Your property>Between
-findBy<Your property>NotNull
-findBy<Your property>Is
-findBy<Your property>Equals
-findBy<Your property>IsNot
-findBy<Your property>IsNull
-findBy<Your property>IsNotNull
-findBy<Your property>{Or|And}<Your other property>
-findBy<Your property>OrderByAsc<Your other Property>
-findBy<Your property>OrderByDesc<Your other Property>
 ```
 
 # HTTP URL  & API Interop Reference
