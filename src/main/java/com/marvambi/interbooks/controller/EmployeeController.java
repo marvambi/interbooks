@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -45,7 +46,9 @@ public class EmployeeController {
 
 			return new ResponseEntity<>(employees, HttpStatus.OK);
 		} catch (Exception e) {
-			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+			HttpHeaders headers = new HttpHeaders();
+    		headers.add("SERVER ERROR", "INTERNAL SERVER ERROR");
+			return new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 
@@ -67,7 +70,9 @@ public class EmployeeController {
 					.save(new Employee(employee.getTitle(), employee.getDescription(), false));
 			return new ResponseEntity<>(_employee, HttpStatus.CREATED);
 		} catch (Exception e) {
-			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+			HttpHeaders headers = new HttpHeaders();
+    		headers.add("SERVER ERROR", "INTERNAL SERVER ERROR");
+			return new ResponseEntity<>(headers, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 
