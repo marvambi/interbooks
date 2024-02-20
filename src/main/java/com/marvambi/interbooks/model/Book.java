@@ -25,9 +25,7 @@ public class Book {
     @Column(name = "yearOfPub")
     private Integer yearOfPub;
 
-	public Book() {
-
-	}
+	public Book() {}
 
 	public Book(String title, String author, String isbn, Genre genre, Integer yearOfPub) {
 		this.title = title;
